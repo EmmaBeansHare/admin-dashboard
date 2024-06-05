@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,18 +21,68 @@
         </div><a href="https://www.flaticon.com/de/autoren/freepik" class="logolink">Logo by Freepik</a>
         </div>
         <div class="grid-container">
+        <div class="search-container">
+          <h1>Welcome back, Beans</h1>
+        </div>
         <div class="grid">
-            <div class="box1 box"></div>
-            <div class="box2 box"></div>
-            <div class="box3 box"></div>
-            <div class="box4 box"></div>
-            <div class="box5 box"></div>
-            <div class="box6 box"></div>
-            <div class="box7 box"></div>
+            <div class="box1 box">
+                <div class="textbox1">
+                    <h4>This Weeks Activity</h4>
+                    <p>See how productive you've been in the past week</p>
+                </div>
+                <div class="canvas">
+                <canvas id="myChart"></canvas>
+              </div>
+            </div>
+            <div class="box2 box">
+              <div class="textbox2">
+                <h4>Start a new project</h4>
+                <p>Create a new project for your profile! Make it look fresh.</p>
+            </div>
+                <form>
+                  <ul>
+                    <li class="li-one">
+                      <label for="project-name">Project name</label>
+                      <input type="text" id="project-name">
+                    </li>
+                    <div class="btn-checks">
+                        <div class="checks">
+                            <li class="li-two">
+                              <input type="radio" id="checkbox1" name="radio">
+                              <label for="checkbox1">Private</label>
+                            </li>
+                            <li class="li-three">
+                              <input type="radio" id="checkbox2" name="radio">
+                              <label for="checkbox2">Public</label>
+                            </li>
+                        </div>
+                        <button type="submit" class="submit-button">Create Project</button>
+                    </div>
+                  </ul>
+                </form>
+            </div>
+            <div class="box3 box">box3</div>
+            <div class="box5 box">
+              <div class="textbox5">
+                <h4>Favourite</h4>
+                <p>You've marked this project as your favourite.</p>
+              </div>
+              <a href="https://emmahare.github.io/Resident-Evil/" class="fav-project">
+                <img src="images/fav-prj.png">
+                <h3>Resident-Evil</h3>
+                <p>A Resident Evil themed landing page made with HTML and CSS, with its
+                layout concentrated on Flexbox.</p>
+              </a>
+         
+            </div>
+            <div class="box6 box">box6</div>
             <div class="box8 box"></div>
         </div>
         </div>
-    </aside>
+  </aside>
     <aside class="right-side"></aside>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
