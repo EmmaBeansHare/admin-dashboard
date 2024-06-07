@@ -1,3 +1,7 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
 
 body{
     display: flex;
@@ -20,9 +24,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    /*flex-direction: column;*/
     flex: 1;
-    /*padding: 0 15px;*/
 }
 
 .sidebar{
@@ -41,7 +43,7 @@ logo{
     display: flex;
     align-items: center;
     gap: 5px;
-    margin-top: -10px;
+    margin-top: 10px;
 }
 
 .logo{
@@ -112,6 +114,11 @@ logo h1{
     
 }
 
+.search-container h1{
+    font-size: 2.3rem;
+    font-weight: lighter;
+}
+
 .search-side{
     display: flex;
     align-items: center;
@@ -177,33 +184,59 @@ logo h1{
     box-shadow: 
     0 0 5px black;
     padding: 15px;
-    
 }
 
-.box1{
+.textbox{
     display: flex;
+    flex-direction: column;
+    gap: 0px;
+    margin-top: -4px;
+}
+
+
+.box h4{
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin: 0px;
+}
+
+.box p{
+    margin: 0px;
+    opacity: 0.6;
+    font-size: 0.9rem;
+}
+
+.proj-img:hover{
+    outline: 1px solid rgba(64, 165, 224, 0.683);
+}
+
+.sec-text h3{
+    margin: 0px;
+    opacity: 0.9;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+
+.sec-text p{
+    margin: 0px;
+    opacity: 0.6;
+    font-size: 0.8rem;
+}
+
+.sec-text h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+.box1{
     flex-direction: column;
     justify-content: space-between;
     grid-column: 1 / 3;
     grid-row: 1 / 3;
 }
 
-.textbox1{
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-}
 
-.textbox1 h4{
-    font-size: 1.7rem;
-    font-weight: lighter;
-    margin: 0px;
-}
-
-.textbox1 p{
-    margin: 0px;
-    opacity: 0.6;
-}
 
 .canvas{
     height: 70%;
@@ -215,17 +248,10 @@ logo h1{
 }
 
 .box2{
-    display: flex;
     flex-direction: column;
     justify-content: space-around;
     grid-column: 3 / 5;
-    
-}
-
-.box2 h4{
-    font-size: 1.4rem;
-    font-weight: 500;
-    margin: 0px;
+    gap: 5px;
 }
 
 .box2 p{
@@ -246,6 +272,7 @@ logo h1{
     list-style: none;
     padding: 0px;
     gap: 5px;
+    margin: 0px;
 }
 
 .li-one{
@@ -351,12 +378,53 @@ logo h1{
 
 
 .box3{
+    flex-direction: column;
+    gap: 10px;
     grid-row: 3 / 4;
     grid-column: 1 / 3;
 }
 
+.changes-container{
+    display: flex;
+    max-height: 90px;
+    overflow: scroll;
+    gap: 10px;
+}
+
+.changes-container hr{
+    height: 760px;
+    border: 1px solid black;
+    opacity: 0.6;
+}
+
+.all-changes{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.changes h5{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    font-size: 1rem;
+    font-weight: lighter;
+    opacity: 0.6;
+}
+
+.changes p{
+    font-size: 0.8rem;
+}
+
+.change1{
+    margin-top: 20px;
+}
+
+.change2 p{
+    margin-bottom: 50px;
+}
+
 .box4{
-    display: flex; 
     flex-direction: column;
     justify-content: space-between;
     grid-row: 3 / 5;
@@ -382,51 +450,97 @@ logo h1{
 
 .fav-project{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     gap: 5px;
     color: black;
     text-decoration: none;
-    margin-bottom: 20px;
-    width: 92%;
     align-self: center;
 }
 
 .fav-project img{
-    width: 60%;
+    width: 75%;
     border-radius: 10px;
-}
-
-.fav-project img:hover{
-    outline: 1px solid rgba(64, 165, 224, 0.683);
-}
-
-.fav-text h3{
-    margin: 0px;
-    opacity: 0.9;
-    font-size: 1rem;
-    font-weight: lighter;
-}
-
-.fav-text p{
-    margin: 0px;
-    opacity: 0.6;
-    font-size: 0.8rem;
 }
 
 .fav-text h3:hover{
     text-decoration: underline;
 }
 
-
-
 .box5{
+    flex-direction: column;
+    gap: 15px;
     grid-row: 4 / 5;
     grid-column: 1 / 3;
 }
 
+.pro-container{
+    display: flex;
+    gap: 30%;
+}
+
+.pro-container ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style:inside;
+    opacity: 0.8;
+}
+
+.pro-container ul li{
+    font-size: 1rem;
+}
+
+.pro-container button{
+    height: 50%;
+    padding: 0 5px;
+    font-size: 0.8rem;
+    background-color: rgb(64, 165, 224);
+    border: none;
+    border-radius: 5px;
+    align-self: end;
+    transition: 0.2s ease-in-out;
+}
+
+.pro-container button:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.pro-container button:active{
+    transform: scale(0.8);
+}
+
 .box6{
+    flex-direction: column;
     grid-row: 2 / 3;
     grid-column: 3 / 5;
+}
+
+.pop-project-container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    max-height: 120px;
+    overflow: scroll;
+}
+
+.pop-project{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+.pop-project img{
+    height: 90px;
+    border-radius: 10px;
+}
+
+.pop-project1{
+    margin-top: 20px;
+}
+
+.pop-project4{
+    margin-bottom: 20px;
 }
 
 .right-side{
